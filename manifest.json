@@ -1,17 +1,15 @@
 {
-  "name": "Ghost of Radio",
-  "short_name": "Ghost Radio",
-  "description": "Where vintage broadcasts return from the dead. Classic old time radio on YouTube.",
+  "name": "Ghost of Radio \u2014 Espa\u00f1ol",
+  "short_name": "GhostRadio ES",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#0a0a0a",
   "background_color": "#0a0a0a",
+  "theme_color": "#c9a84c",
   "icons": [
     {
-      "src": "images/logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ]
 }
