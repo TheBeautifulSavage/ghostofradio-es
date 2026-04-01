@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://es.ghostofradio.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://es.ghostofradio.com/shows.html</loc><priority>0.9</priority></url>
-  <url><loc>https://es.ghostofradio.com/about.html</loc><priority>0.7</priority></url>
-  <!-- Spanish OTR Shows -->
-  <url><loc>https://es.ghostofradio.com/kaliman/</loc><priority>0.9</priority></url>
-  <url><loc>https://es.ghostofradio.com/la-tremenda-corte/</loc><priority>0.9</priority></url>
-  <url><loc>https://es.ghostofradio.com/el-fantasma/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/el-llanero-solitario/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/cuentos-selva/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/el-monje-loco/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/cisco-kid-espanol/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/sangre-y-acero/</loc><priority>0.7</priority></url>
-  <url><loc>https://es.ghostofradio.com/radionovela/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/tarzana-de-los-monos/</loc><priority>0.8</priority></url>
-  <!-- Translated English Classics -->
-  <url><loc>https://es.ghostofradio.com/suspenso/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/dragnet/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/sherlock/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/escape/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/gunsmoke/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/inner-sanctum/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/fibber-mcgee/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/x-minus-one/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/sam-spade/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/johnny-dollar/</loc><priority>0.8</priority></url>
-  <url><loc>https://es.ghostofradio.com/la-sombra/</loc><priority>0.8</priority></url>
+  <url><loc>https://es.ghostofradio.com/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/shows.html</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/about.html</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/cisco-kid-espanol/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/cuentos-selva/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/dragnet/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/el-fantasma/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/el-llanero-solitario/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/el-monje-loco/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/escape/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/fibber-mcgee/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/gunsmoke/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/inner-sanctum/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/johnny-dollar/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/kaliman/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/la-sombra/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/la-tremenda-corte/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/radionovela/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/sam-spade/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/sangre-y-acero/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/sherlock/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/suspenso/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/tarzana-de-los-monos/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://es.ghostofradio.com/x-minus-one/</loc><lastmod>2026-03-31</lastmod><changefreq>weekly</changefreq></url>
 </urlset>
