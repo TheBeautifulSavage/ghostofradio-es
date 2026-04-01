@@ -1,0 +1,288 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost of Radio — Donde las Transmisiones Vintage Vuelven de la Muerte</title>
+  <meta name="description" content="Ghost of Radio trae programas clásicos de radio antigua de vuelta a la vida en YouTube. Escucha Sam Spade, The Shadow, Sherlock Holmes, Johnny Dollar y The Whistler.">
+  <meta property="og:title" content="Ghost of Radio">
+  <meta property="og:description" content="Donde las transmisiones vintage vuelven de la muerte. Radio clásica antigua en YouTube.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://es.ghostofradio.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ghost Radio">
+  <link rel="apple-touch-icon" href="images/logo.png">
+<style>
+.email-capture{background:#0d0d0d;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;}
+.email-capture__inner{text-align:center;max-width:500px;margin:0 auto;padding:2rem 0;}
+.email-capture__title{font-family:'Special Elite',cursive;color:#c9a84c;font-size:1.6rem;margin-bottom:.5rem;}
+.email-capture__desc{color:#888;margin-bottom:1.5rem;font-size:1rem;}
+.email-capture__form{display:flex;gap:.5rem;max-width:420px;margin:0 auto 1rem;}
+.email-capture__input{flex:1;background:#1a1a1a;border:1px solid #333;color:#f0dca0;padding:.7rem 1rem;border-radius:6px;font-size:1rem;}
+.email-capture__input:focus{outline:none;border-color:#c9a84c;}
+.email-capture__btn{background:#c9a84c;color:#0a0a0a;border:none;padding:.7rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.email-capture__btn:hover{background:#e0c060;}
+.email-capture__fine{color:#555;font-size:.75rem;}
+
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-icon"><img src="images/logo.png" alt="Ghost of Radio" class="nav__logo-img"></span> Ghost of Radio
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="shows.html">Programas</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero scanlines">
+    <div class="hero__content">
+      <span class="hero__subtitle typewriter" data-text="~ Sintoniza el pasado ~">~ Sintoniza el pasado ~</span>
+      <h1 class="hero__title flicker">Ghost of Radio</h1>
+      <p class="hero__tagline">Donde las transmisiones vintage vuelven de la muerte.</p>
+      <div class="hero__cta">
+        <a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener" class="btn btn--filled">▶ Suscríbete en YouTube</a>
+        <a href="shows.html" class="btn">Explorar Programas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Shows -->
+  <section class="section" id="shows">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__overline">Ahora en Transmisión</span>
+        <h2>Programas Destacados</h2>
+        <div class="divider"></div>
+        <p>Historias clásicas de detectives, antologías oscuras, westerns, ciencia ficción, comedia y más — 46 programas, 12.000+ episodios, todos gratis para escuchar.</p>
+      </div>
+
+      <div class="shows-grid">
+
+        <a href="/sam-spade/" class="show-card fade-in" style="background-image: url('images/sam-spade.jpg');">
+          <div class="show-card__era">1946–1951 · NBC/CBS</div>
+          <h3 class="show-card__title">Sam Spade, Private Detective</h3>
+          <p class="show-card__quote">"Sam Spade, el detective privado de sangre fría de San Francisco…"</p>
+          <p class="show-card__desc">Sigue al detective privado burlón de San Francisco a través de una bruma de engaño, traiciones y peligro en esta serie clásica de detectives noir.</p>
+        </a>
+
+        <a href="/shadow/" class="show-card fade-in" style="background-image: url('images/the-shadow.jpg');">
+          <div class="show-card__era">1937–1954 · Mutual Broadcasting</div>
+          <h3 class="show-card__title">The Shadow</h3>
+          <p class="show-card__quote">"¿Quién sabe qué mal acecha en el corazón de los hombres? ¡The Shadow lo sabe!"</p>
+          <p class="show-card__desc">Lamont Cranston, joven adinerado de la sociedad, utiliza su poder para nublar las mentes de los hombres para luchar contra el crimen como The Shadow — uno de los personajes más icónicos de la radio.</p>
+        </a>
+
+        <a href="/sherlock/" class="show-card fade-in" style="background-image: url('images/sherlock.jpg');">
+          <div class="show-card__era">1930s–1940s · NBC/Mutual</div>
+          <h3 class="show-card__title">Sherlock Holmes</h3>
+          <p class="show-card__quote">"Elemental, mi querido Watson."</p>
+          <p class="show-card__desc">El mejor detective del mundo y su fiel compañero Dr. Watson resuelven misterios imposibles desde el 221B Baker Street en estas adaptaciones clásicas de radio.</p>
+        </a>
+
+        <a href="/johnny-dollar/" class="show-card fade-in" style="background-image: url('images/johnny-dollar.jpg');">
+          <div class="show-card__era">1949–1962 · CBS</div>
+          <h3 class="show-card__title">Yours Truly, Johnny Dollar</h3>
+          <p class="show-card__quote">"¡El hombre con la cuenta de gastos más emocionante de América!"</p>
+          <p class="show-card__desc">El fabuloso investigador de seguros independiente de América persigue fraudes, robos y asesinatos por todo el país — todo meticulosamente documentado en su cuenta de gastos.</p>
+        </a>
+
+        <a href="/whistler/" class="show-card fade-in" style="background-image: url('images/whistler.jpg');">
+          <div class="show-card__era">1942–1955 · CBS</div>
+          <h3 class="show-card__title">The Whistler</h3>
+          <p class="show-card__quote">"Soy The Whistler y sé muchas cosas, porque camino en la noche…"</p>
+          <p class="show-card__desc">Un narrador misterioso guía a los oyentes a través de historias oscuras de destino, ironía y justicia en esta serie antológica atmosférica de la era dorada de la radio.</p>
+        </a>
+
+      </div>
+
+      <div class="text-center mt-2 fade-in">
+        <a href="shows.html" class="btn">Explorar los 46 Programas →</a>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="section email-capture" id="subscribe">
+  <div class="container">
+    <div class="email-capture__inner">
+      <h3 class="email-capture__title">&#128251; Nunca te Pierdas un Episodio</h3>
+      <p class="email-capture__desc">Recibe notificaciones cuando se agreguen nuevos programas y episodios a Ghost of Radio.</p>
+      <form class="email-capture__form" action="https://formspree.io/f/ghostofradio" method="POST">
+        <input type="email" name="email" placeholder="tu@correo.com" required class="email-capture__input">
+        <button type="submit" class="email-capture__btn">Suscribirse Gratis</button>
+      </form>
+      <p class="email-capture__fine">Sin spam. Desuscríbete en cualquier momento. ghostofradio.com</p>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Videos -->
+  <section class="section section--alt" id="videos">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-header__overline">Del Archivo</span>
+        <h2>Episodios Recientes</h2>
+        <div class="divider"></div>
+        <p>Descubre las últimas subidas en nuestro canal de YouTube.</p>
+      </div>
+
+      <div class="videos-grid">
+        <div class="video-embed fade-in">
+          <div class="video-embed__wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/X-M_gntHyZc"
+              title="Sam Spade | Classic Old Time Radio | Ghost of Radio"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-embed__info">
+            <p class="video-embed__title">ADVERTENCIA: No Dejarás de Escuchar | Sam Spade | 5 Horas</p>
+          </div>
+        </div>
+
+        <div class="video-embed fade-in">
+          <div class="video-embed__wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/4yg6r720xnk"
+              title="Sam Spade | Most Gripping Cases | Ghost of Radio"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="video-embed__info">
+            <p class="video-embed__title">Los Casos Más Cautivadores de Sam Spade Jamás Grabados | 5 Horas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-2 fade-in">
+        <a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener" class="btn btn--filled">▶ Visita Nuestro Canal de YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe CTA -->
+  <section class="cta-banner">
+    <div class="container fade-in">
+      <h2>Nunca te Pierdas una Transmisión</h2>
+      <p>Suscríbete a Ghost of Radio en YouTube y síguenos en Facebook para nuevos episodios de la era dorada de la radio.</p>
+      <a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener" class="btn btn--filled">▶ Suscríbete en YouTube</a>
+      <a href="https://www.facebook.com/profile.php?id=61575492482642" target="_blank" rel="noopener" class="btn">Síguenos en Facebook</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__brand-name"><img src="images/logo.png" alt="Ghost of Radio" class="footer__logo-img"> Ghost of Radio</div>
+        <p>Donde las transmisiones vintage vuelven de la muerte. Llevando la era dorada de la radio a una nueva generación en YouTube.</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener">▶ YouTube</a>
+          <a href="https://www.facebook.com/profile.php?id=61575492482642" target="_blank" rel="noopener">ⓕ Facebook</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navegar</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="shows.html">Programas</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+            <li><a href="mailto:admin@ghostofradio.com">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span class="current-year">2026</span> Ghost of Radio. Todos los derechos reservados. Los programas de radio clásicos son de dominio público.</p>
+    </div>
+  </footer>
+
+  <!-- Install App Banner -->
+  <div id="installBanner" class="install-banner" style="display:none;">
+    <span>Instala Ghost of Radio para escuchar sin conexión</span>
+    <button id="installBtn" class="btn btn--filled" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Instalar</button>
+    <button id="installDismiss" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1.2rem;padding:0.5rem;" aria-label="Dismiss">&times;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+
+    // PWA Install Banner
+    (function () {
+      var deferredPrompt = null;
+      var banner = document.getElementById('installBanner');
+      var installBtn = document.getElementById('installBtn');
+      var dismissBtn = document.getElementById('installDismiss');
+
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        // Show banner after 30 seconds
+        setTimeout(function () {
+          if (deferredPrompt && !sessionStorage.getItem('installDismissed')) {
+            banner.style.display = 'flex';
+          }
+        }, 30000);
+      });
+
+      if (installBtn) {
+        installBtn.addEventListener('click', function () {
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(function () {
+              deferredPrompt = null;
+              banner.style.display = 'none';
+            });
+          }
+        });
+      }
+
+      if (dismissBtn) {
+        dismissBtn.addEventListener('click', function () {
+          banner.style.display = 'none';
+          sessionStorage.setItem('installDismissed', '1');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+```

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos los Programas — Ghost of Radio | Radio Clásica Gratuita</title>
+  <meta name="description" content="Explora clásicos de la radio latinoamericana y española: Kalimán, La Tremenda Corte, El Llanero Solitario, El Fantasma y más. Cientos de episodios gratis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <style>
+    .shows-toolbar {
+      display:flex; flex-wrap:wrap; gap:.75rem; align-items:center;
+      margin-bottom:1.5rem; padding:1rem; background:#111; border-radius:8px;
+      border:1px solid #222;
+    }
+    .search-box {
+      flex:1; min-width:200px;
+      background:#0a0a0a; border:1px solid #333; border-radius:6px;
+      padding:.6rem 1rem; color:#f0dca0; font-size:.95rem;
+      font-family:'Crimson Text',serif;
+    }
+    .search-box::placeholder { color:#555; }
+    .search-box:focus { outline:none; border-color:#c9a84c; }
+    .genre-filters { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .genre-btn {
+      background:#1a1a1a; border:1px solid #333; border-radius:20px;
+      padding:.35rem .9rem; color:#888; font-size:.8rem; cursor:pointer;
+      transition:all .2s; letter-spacing:.04em; text-transform:uppercase;
+    }
+    .genre-btn:hover, .genre-btn.active {
+      background:var(--gc, #c9a84c); border-color:var(--gc, #c9a84c);
+      color:#0a0a0a; font-weight:700;
+    }
+    .shows-count { color:#888; font-size:.85rem; margin-bottom:1rem; }
+    .shows-count span { color:#c9a84c; font-weight:700; }
+    .shows-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+      gap:1.25rem;
+    }
+    .show-card {
+      background:#111; border:1px solid #222; border-radius:8px;
+      text-decoration:none; color:inherit; display:block;
+      transition:border-color .2s, transform .2s; overflow:hidden;
+    }
+    .show-card:hover { border-color:#c9a84c; transform:translateY(-3px); }
+    .show-card.hidden { display:none; }
+    .show-card__img {
+      height:150px; background-size:cover; background-position:center;
+      position:relative; background-color:#1a1a1a;
+    }
+    .show-card__badge {
+      position:absolute; top:.6rem; left:.6rem;
+      font-size:.6rem; font-weight:700; letter-spacing:.08em;
+      text-transform:uppercase; padding:.2rem .6rem; border-radius:4px; color:#fff;
+    }
+    .show-card__body { padding:.9rem; }
+    .show-card__title {
+      font-family:'Special Elite',cursive; font-size:1rem;
+      color:#f0dca0; margin:0 0 .3rem; line-height:1.3;
+    }
+    .show-card__era { font-size:.72rem; color:#777; margin-bottom:.4rem; }
+    .show-card__count { font-size:.75rem; color:#c9a84c; font-weight:600; }
+    .no-results { text-align:center; color:#666; padding:3rem; font-size:1.1rem; display:none; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-icon"><img src="images/logo.png" alt="Ghost of Radio" class="nav__logo-img"></span> Ghost of Radio
+      </a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="shows.html" class="active">Programas</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+        <li><a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1 class="flicker">Todos los Programas</h1>
+    <div class="divider"></div>
+    <p>Radio clásica latinoamericana y española · Cientos de episodios · Gratis</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="shows-toolbar">
+        <input type="text" class="search-box" id="showSearch" placeholder="Buscar programas..." autocomplete="off">
+        <div class="genre-filters">
+          <button class="genre-btn active" data-genre="all">Todos</button>
+          <button class="genre-btn" data-genre="Aventura" style="--gc:#2d6a4f">Aventura</button>
+          <button class="genre-btn" data-genre="Comedia" style="--gc:#e67e22">Comedia</button>
+          <button class="genre-btn" data-genre="Detective" style="--gc:#c9a84c">Detective</button>
+          <button class="genre-btn" data-genre="Drama" style="--gc:#5d6d7e">Drama</button>
+          <button class="genre-btn" data-genre="Misterio" style="--gc:#7b2d8b">Misterio</button>
+          <button class="genre-btn" data-genre="Ciencia-Ficción" style="--gc:#1a6b8a">Ciencia-Ficción</button>
+          <button class="genre-btn" data-genre="Western" style="--gc:#8b4513">Western</button>
+        </div>
+      </div>
+
+      <div class="shows-count">Mostrando <span id="showCount">8</span> programas</div>
+
+      <div class="shows-grid" id="showsGrid">
+
+        <!-- SPANISH OTR SHOWS -->
+        <a href="kaliman/" class="show-card" data-genre="Aventura" data-name="kaliman el hombre increible">
+          <div class="show-card__img" style="background-color:#1a2a1a;">
+            <span class="show-card__badge" style="background:#2d6a4f">Aventura</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">Kalimán, El Hombre Increíble</h3>
+            <div class="show-card__era">1963–1982 · Radio Cadena Nacional · México</div>
+            <div class="show-card__count">500+ episodios</div>
+          </div>
+        </a>
+
+        <a href="la-tremenda-corte/" class="show-card" data-genre="Comedia" data-name="la tremenda corte tres patines">
+          <div class="show-card__img" style="background-color:#2a1a0a;">
+            <span class="show-card__badge" style="background:#e67e22">Comedia</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">La Tremenda Corte</h3>
+            <div class="show-card__era">1942–1961 · Radio CMQ · Cuba</div>
+            <div class="show-card__count">260+ episodios</div>
+          </div>
+        </a>
+
+        <a href="el-fantasma/" class="show-card" data-genre="Aventura" data-name="el fantasma el fantasma que camina">
+          <div class="show-card__img" style="background-color:#0a0a1a;">
+            <span class="show-card__badge" style="background:#2d6a4f">Aventura</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">El Fantasma</h3>
+            <div class="show-card__era">1940s–1950s · Radio · América Latina</div>
+            <div class="show-card__count">100+ episodios</div>
+          </div>
+        </a>
+
+        <a href="el-llanero-solitario/" class="show-card" data-genre="Western" data-name="el llanero solitario lone ranger">
+          <div class="show-card__img" style="background-color:#1a0a0a;">
+            <span class="show-card__badge" style="background:#8b4513">Western</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">El Llanero Solitario</h3>
+            <div class="show-card__era">1933–1955 · WXYZ · Doblado al español</div>
+            <div class="show-card__count">3,000+ episodios</div>
+          </div>
+        </a>
+
+        <a href="cuentos-selva/" class="show-card" data-genre="Drama" data-name="cuentos de la selva horacio quiroga">
+          <div class="show-card__img" style="background-color:#0a1a0a;">
+            <span class="show-card__badge" style="background:#5d6d7e">Drama</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">Cuentos de la Selva</h3>
+            <div class="show-card__era">Horacio Quiroga · Adaptaciones de radio</div>
+            <div class="show-card__count">Cuentos clásicos</div>
+          </div>
+        </a>
+
+        <a href="sangre-y-acero/" class="show-card" data-genre="Aventura" data-name="sangre y acero aventura radio">
+          <div class="show-card__img" style="background-color:#1a0a0a;">
+            <span class="show-card__badge" style="background:#2d6a4f">Aventura</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">Sangre y Acero</h3>
+            <div class="show-card__era">1940s–1950s · Radionovela</div>
+            <div class="show-card__count">Episodios de aventura</div>
+          </div>
+        </a>
+
+        <a href="cisco-kid-espanol/" class="show-card" data-genre="Western" data-name="cisco kid espanol western">
+          <div class="show-card__img" style="background-color:#1a1a0a;">
+            <span class="show-card__badge" style="background:#8b4513">Western</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">El Cisco Kid</h3>
+            <div class="show-card__era">1942–1956 · Mutual · Western</div>
+            <div class="show-card__count">600+ episodios</div>
+          </div>
+        </a>
+
+        <a href="el-monje-loco/" class="show-card" data-genre="Misterio" data-name="el monje loco horror misterio mexico">
+          <div class="show-card__img" style="background-color:#0a0a0a;">
+            <span class="show-card__badge" style="background:#7b2d8b">Misterio</span>
+          </div>
+          <div class="show-card__body">
+            <h3 class="show-card__title">El Monje Loco</h3>
+            <div class="show-card__era">1933–1958 · XEW Radio · México</div>
+            <div class="show-card__count">Horror y misterio mexicano</div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="no-results" id="noResults">No se encontraron programas. Intenta con otro término de búsqueda.</div>
+
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container fade-in">
+      <h2>No Te Pierdas Ninguna Transmisión</h2>
+      <p>Suscríbete a Ghost of Radio en YouTube y síguenos en Facebook para nuevos episodios de la época dorada de la radio.</p>
+      <a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener" class="btn btn--filled">▶ Suscribirse en YouTube</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__brand-name"><img src="images/logo.png" alt="Ghost of Radio" class="footer__logo-img"> Ghost of Radio</div>
+        <p>Donde las transmisiones de antaño regresan del pasado. Llevando la época dorada de la radio a una nueva generación.</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@GhostOfRadio" target="_blank" rel="noopener">▶ YouTube</a>
+          <a href="https://www.facebook.com/profile.php?id=61575492482642" target="_blank" rel="noopener">ⓕ Facebook</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Navegar</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="shows.html">Programas</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+            <li><a href="mailto:admin@ghostofradio.com">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span class="current-year">2026</span> Ghost of Radio. Todos los derechos reservados. Los programas clásicos de radio son de dominio público.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Search and filter
+    var searchBox = document.getElementById('showSearch');
+    var genreBtns = document.querySelectorAll('.genre-btn');
+    var cards = document.querySelectorAll('#showsGrid .show-card');
+    var countEl = document.getElementById('showCount');
+    var noResults = document.getElementById('noResults');
+    var activeGenre = 'all';
+
+    function filterShows() {
+      var query = searchBox.value.toLowerCase();
+      var visible = 0;
+      cards.forEach(function(card) {
+        var name = card.getAttribute('data-name') || '';
+        var genre = card.getAttribute('data-genre') || '';
+        var matchSearch = !query || name.includes(query);
+        var matchGenre = activeGenre === 'all' || genre === activeGenre;
+        if (matchSearch && matchGenre) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      countEl.textContent = visible;
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    searchBox.addEventListener('input', filterShows);
+    genreBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        genreBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeGenre = btn.getAttribute('data-genre');
+        filterShows();
+      });
+    });
+  </script>
+</body>
+</html>
