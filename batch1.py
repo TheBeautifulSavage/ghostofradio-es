@@ -88,8 +88,25 @@ def copy_show(show_slug):
     print(f'✅ {show_slug} done — {copied} new pages copied', flush=True)
     return copied
 
+import sys
+
+# Use command-line args if provided, otherwise run all shows with gaps
+if len(sys.argv) > 1:
+    shows_to_run = sys.argv[1:]
+else:
+    # Auto-detect shows with gaps between EN and ES
+    shows_to_run = []
+    for d in sorted(EN.iterdir()):
+        if not d.is_dir() or d.name.startswith('.'): continue
+        en_count = len(list(d.glob('*.html')))
+        es_dir = ES / d.name
+        es_count = len(list(es_dir.glob('*.html'))) if es_dir.exists() else 0
+        if en_count > es_count:
+            shows_to_run.append(d.name)
+
+print(f'Running {len(shows_to_run)} shows: {shows_to_run[:5]}...', flush=True)
 total = 0
-for show in ['loneranger', 'suspense', 'whistler']:
+for show in shows_to_run:
     total += copy_show(show)
 
-print(f'Batch 1 complete — {total} total pages copied')
+print(f'Complete — {total} total pages copied')
